@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BINparser</string>
+    <string name="menu_history">History</string>
+    <string name="menu_request">Request</string>
+</resources>
