@@ -2,4 +2,17 @@
     <string name="app_name">BINparser</string>
     <string name="menu_history">История запросов</string>
     <string name="menu_request">Запрос</string>
+
+    <string name="card_scheme">Платёжная система: </string>
+    <string name="card_type">Тип: </string>
+    <string name="card_prepaid">Предоплачена: </string>
+    <string name="bank">Банк:</string>
+    <string name="bank_name">Название: </string>
+    <string name="bank_url">URL: </string>
+    <string name="bank_phone">Телефон: </string>
+    <string name="bank_city">Город: </string>
+    <string name="country_name">Страна: </string>
+    <string name="country_latitude">Широта: </string>
+    <string name="country_longitude">Долгота: </string>
+
 </resources>
