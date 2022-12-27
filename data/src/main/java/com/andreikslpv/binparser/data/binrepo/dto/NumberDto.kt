@@ -1,4 +1,4 @@
-package com.andreikslpv.binparser.data.dto
+package com.andreikslpv.binparser.data.binrepo.dto
 
 
 import com.google.gson.annotations.SerializedName

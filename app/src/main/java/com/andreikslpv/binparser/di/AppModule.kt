@@ -11,6 +11,6 @@ val appModule = module {
     }
 
     viewModel<RequestViewModel> {
-        RequestViewModel()
+        RequestViewModel(getBinDataUseCase = get())
     }
 }

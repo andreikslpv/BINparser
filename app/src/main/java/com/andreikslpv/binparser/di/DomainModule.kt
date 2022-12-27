@@ -1,6 +1,7 @@
 package com.andreikslpv.binparser.di
 
 import com.andreikslpv.binparser.domain.usecase.AddRequestToHistoryUseCase
+import com.andreikslpv.binparser.domain.usecase.GetBinDataUseCase
 import com.andreikslpv.binparser.domain.usecase.GetHistoryUseCase
 import org.koin.dsl.module
 
@@ -12,5 +13,9 @@ val domainModule = module {
 
     factory<AddRequestToHistoryUseCase> {
         AddRequestToHistoryUseCase(historyRepository = get())
+    }
+
+    factory<GetBinDataUseCase> {
+        GetBinDataUseCase(binRepository = get())
     }
 }

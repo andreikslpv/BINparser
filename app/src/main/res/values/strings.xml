@@ -3,16 +3,27 @@
     <string name="menu_history">История запросов</string>
     <string name="menu_request">Запрос</string>
 
-    <string name="card_scheme">Платёжная система: </string>
-    <string name="card_type">Тип: </string>
-    <string name="card_prepaid">Предоплачена: </string>
+    <string name="card_brand">Бренд: %1$s</string>
+    <string name="card_type">Тип: %1$s</string>
+    <string name="card_prepaid">Предоплачена: %1$s</string>
     <string name="bank">Банк:</string>
-    <string name="bank_name">Название: </string>
-    <string name="bank_url">URL: </string>
-    <string name="bank_phone">Телефон: </string>
-    <string name="bank_city">Город: </string>
-    <string name="country_name">Страна: </string>
-    <string name="country_latitude">Широта: </string>
-    <string name="country_longitude">Долгота: </string>
+    <string name="bank_name">Название: %1$s</string>
+    <string name="bank_url">URL: %1$s</string>
+    <string name="bank_phone">Телефон: %1$s</string>
+    <string name="bank_city">Город: %1$s</string>
+    <string name="country">Страна:</string>
+    <string name="country_name">%1$s, %2$s, %3$s, %4$s, %5$s</string>
+    <string name="country_coordinate">Широта: %1$d, долгота: %2$d</string>
+    <string name="country_latitude">Широта: %1$s</string>
+    <string name="country_longitude">Долгота: %1$s</string>
+    <string name="yes">да</string>
+    <string name="no">нет</string>
+    <string name="response_404">Совпадающие карты не найдены</string>
+    <string name="response_429">Вы превысили ограничение скорости отправки запросов (10 запросов в минуту)</string>
+    <string name="empty_request">Введенные данные некорректны</string>
+    <string name="card_scheme">Платёжная система: %1$s</string>
+    <string name="card">Карта:</string>
+    <string name="card_number_details">Количество цифр: %1$s, LUHN: %2$s</string>
+
 
 </resources>

@@ -1,4 +1,4 @@
-package com.andreikslpv.binparser.data
+package com.andreikslpv.binparser.data.historyrepo
 
 import com.andreikslpv.binparser.domain.HistoryRepository
 import com.andreikslpv.binparser.domain.models.RequestDomainModel

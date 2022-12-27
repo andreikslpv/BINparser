@@ -8,10 +8,6 @@ import com.andreikslpv.binparser.domain.usecase.GetHistoryUseCase
 class HistoryViewModel(private val getHistoryUseCase: GetHistoryUseCase) : ViewModel() {
     val historyLiveData: MutableLiveData<List<RequestDomainModel>> = MutableLiveData()
 
-    init {
-
-    }
-
     fun getHistory() {
         historyLiveData.postValue(getHistoryUseCase.execute())
     }
