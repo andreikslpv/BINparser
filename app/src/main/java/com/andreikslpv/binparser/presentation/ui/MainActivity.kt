@@ -8,7 +8,8 @@ import com.andreikslpv.binparser.databinding.ActivityMainBinding
 import com.andreikslpv.binparser.presentation.ui.fragments.HistoryFragment
 import com.andreikslpv.binparser.presentation.ui.fragments.RequestFragment
 import com.andreikslpv.binparser.presentation.ui.utils.FragmentsType
-import java.util.*
+
+const val BUNDLE_KEY_REQUEST = "request"
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -19,8 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initBottomNavigationMenu()
-        //val dateNow = Calendar.getInstance().time
-        // если первый, то запускаем фрагмент Home
+        // если первый, то запускаем фрагмент Request
         if (savedInstanceState == null)
             changeFragment(RequestFragment(), FragmentsType.REQUEST)
     }
@@ -63,6 +63,14 @@ class MainActivity : AppCompatActivity() {
             .commit()
     }
 
-
+    fun launchRequestFragment(request: String) {
+        val bundle = Bundle()
+        bundle.putString(BUNDLE_KEY_REQUEST, request)
+        var fragment = checkFragmentExistence(FragmentsType.REQUEST)
+        if (fragment == null)
+            fragment = RequestFragment()
+        fragment.arguments = bundle
+        changeFragment(fragment, FragmentsType.REQUEST)
+    }
 
 }

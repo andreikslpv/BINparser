@@ -10,6 +10,7 @@ import com.andreikslpv.binparser.domain.usecase.GetBinDataUseCase
 class RequestViewModel(private val getBinDataUseCase: GetBinDataUseCase) : ViewModel() {
     val binDataLiveData: MutableLiveData<BinDataDomainModel> = MutableLiveData()
     val apiResponseMessage: MutableLiveData<String> = MutableLiveData()
+    val editTextLiveData: MutableLiveData<String> = MutableLiveData()
 
 
     init {
@@ -32,5 +33,10 @@ class RequestViewModel(private val getBinDataUseCase: GetBinDataUseCase) : ViewM
                     binDataLiveData.postValue(BinDataDomainModel())
                 }
             })
+    }
+
+    fun setEditText(text: String?) {
+        if (text != null)
+            editTextLiveData.postValue(text!!)
     }
 }

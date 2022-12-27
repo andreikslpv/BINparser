@@ -12,7 +12,7 @@ import com.andreikslpv.binparser.domain.models.RequestDomainModel
 class HistoryRecyclerAdapter(private val clickListener: OnItemClickListener) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    val items = mutableListOf<RequestDomainModel>()
+    private val items = mutableListOf<RequestDomainModel>()
 
     override fun getItemCount() = items.size
 

@@ -9,12 +9,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.andreikslpv.binparser.R
 import com.andreikslpv.binparser.databinding.FragmentRequestBinding
 import com.andreikslpv.binparser.domain.models.RequestDomainModel
 import com.andreikslpv.binparser.domain.usecase.AddRequestToHistoryUseCase
+import com.andreikslpv.binparser.presentation.ui.BUNDLE_KEY_REQUEST
 import com.andreikslpv.binparser.presentation.vm.RequestViewModel
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -36,11 +38,17 @@ class RequestFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentRequestBinding.inflate(inflater, container, false)
+        vm.setEditText(arguments?.getString(BUNDLE_KEY_REQUEST))
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        vm.editTextLiveData.observe(viewLifecycleOwner) {
+            binding.requestEditText.setText(it, TextView.BufferType.EDITABLE)
+            requestBin()
+        }
 
         vm.binDataLiveData.observe(viewLifecycleOwner) {
             val number = if (it.number.length == -1) {
